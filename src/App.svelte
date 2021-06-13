@@ -25,16 +25,16 @@
     return state;
   }
 
-  const token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyZGQwOGE3NjEyODE1YWVlYWFiMmM5Mzk5ZTVlYTI2Y2ZlMzUxY2I2ZDY2Zjc0MmMxMzRkYWMxOWEzZDhlOGRjNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyMzY5NzgxMywiaWF0IjoxNjIzNjExNDAzLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiNzQ3NmZkYmYtMDUwYy00MWE0LWJhZjktOTk3ZDc5OWZiZDM1Iiwic2lkIjoiOTIwMDUyNjAtNzhiYS00YjhiLThiOWUtZDdmZWVkZTcyMzVmIn0.Ro23olRSn6D5h9rlxRaN2laIpWrPfqCBi7faKPwp8qBaJDUIfkqRJ5lUZEUdlaUvXRUCgQZCxfD90pd-v0evyPaJYIHNr9uhntYhIFsLVyG4mEcL2_Xw63JxAgUpIttzjLPbP_fm40G9UPrkLaW4e_RRdhf0LbD0iy7vtYc9sl3Ue_GY3HoY8Ox9HH0n6gmL4HLAhJgSAvdy9p52c7-kO9_ZkTrwaMh1Kp7ECUWrz3d3Ir0C4L0aMEceonygbfp7d8PfDAOCEsFsP70yXZiJHgqjq-R0V4uBAK6awSdClGSpgd4Jzh_yCT5G5opoc5-ynd75Y7TdkLIe-b8oYMSQZojkNIsoYMb-eU-RTtYMcgNWEi63-SmzEQUt0F9F7V7BRK8BgMHhl0n6-BtK1ww1MlFoBbsVeM5wA_pH0vCWkYUacjeJ33NdMvmB6aC8QGCoZ0TaSOduprmL1VZOGQ9csZlxBPo1tDF3GfAXg6gLc1-0SQ36L_ifWyd9slS2mpWq3-Cjx4GZZrn6P6meoyPs0ZC8rqMUDlJRxLZ7H_G5vXU8K1AS0olu7t1dK7nQgMFVM8o_PKlPf0EF0Cz17xa0TEjF62Vmr7nN2Saxyfj5hK1I0ji49W5a3KGFJr2K1UqJDkbmKznhd-DyzY9xlsjRC4VFxD42EbqNOvTvVx6q6X0';
+  const token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyZGQwOGE3NjEyODE1YWVlYWFiMmM5Mzk5ZTVlYTI2Y2ZlMzUxY2I2ZDY2Zjc0MmMxMzRkYWMxOWEzZDhlOGRjNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyMzcxNDc0MSwiaWF0IjoxNjIzNjI4MzMxLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiMmU5YjIwYTktOGNjMS00MDdiLWJhMmMtOWViNTZmNTA2N2Q1Iiwic2lkIjoiMzIyOTU2NTgtNTJlZS00ZTg1LTkyNWItYjhmNWJiNTBmZTg4In0.TzYzk2Lb9WxQ51W58aAmjDjFtbyQA4MbcZnVth9-LWSVilJ_HZA6jYbUI32utl0tMyZyaAGSfJuruIOMgslxN8Q6c7Mvj9E_AfH3fNVF60JWmzhTI-8_yR0f_eUDNXGJWEjt1GBIeI98cyipwNL37S42x_7_RVQjeXSi1PXdqBa92MycK9Ydi1oQLii02832s4Mn7wZi5V_n4ez0Z_OMYLVeW8OJJaut_3pcdLOtH91r8oCMVbFrRwbuuFKxCYnXVGi9s52Te7RMGe6L_E03JjbaShpCW7apz91VZVTE5y0Ln7I91kfhIFUCLjQa6ONtMwayEV8i459_yISD1OgBjyZDVPUYFnQQYV3l6iKbasB1dmpwL9wrrZdSGtTiK0ZrV4fWUD21cormsULwe_K8ok9n7Ec61c59moBUcNZYIUtW3FhLOh_5qvWb9r1zxYJd2mrQ6_iSQqvLaitIj1cVHck1Alz2kNlYRstxZqv0GivWvTIUhHKns_xU8tq7MH9wE_XQMkFGugt5J3etYxNCdtveAqFwCJWgNq11ZGoc-mB66dBASid3IqZu_8suja3we6UkivZN2ZOR1OomRR1ZhsIyRTIeQfo5inLDiZxW2ps-fXwHh1dO5AvuSpss_T4JaZt9vfHG2RpS6cmpVUabPXA92yiSy1v24MN4o5P8Dhc';
   const initPhrase = 'Включи Финансовый трекер'
 
     const init = () => {
-      return createSmartappDebugger({
-        token,
-        initPhrase,
-        getState,
-      })
-      // return createAssistant({getState});
+      // return createSmartappDebugger({
+      //   token,
+      //   initPhrase,
+      //   getState,
+      // })
+      return createAssistant({getState});
     }
   const assistant = init();
 
