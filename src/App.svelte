@@ -10,7 +10,7 @@
 
   let text = '';
   let price;
-
+  let ObsceneRegex = /^((у|[нз]а|(хитро|не)?вз?[ыьъ]|с[ьъ]|(и|ра)[зс]ъ?|(о[тб]|под)[ьъ]?|(.\B)+?[оаеи])?-?([её]б(?!о[рй])|и[пб][ае][тц]).?|(н[иеа]|[дп]о|ра[зс]|з?а|с(ме)?|о(т|дно)?|апч)?-?х[уy]([яйиеёю]|ли(?!ган)).?|(в[зы]|(три|два|четыре)жды|(н|сук)а)?-?[б6]л(я(?!(х|ш[кн]|мб)[ауеыио]).?|[еэ][дт]ь?)|(ра[сз]|[зн]а|[со]|вы?|п(р[ои]|од)|и[зс]ъ?|[ао]т)?п[иеё]зд.?|(за)?п[ие]д[аое]?р((ас)?(и(ли)?[нщктл]ь?)?|(о(ч[еи])?)?к|юг)[ауеы]?|манд([ауеы]|ой|[ао]вошь?(е?к[ауе])?|юк(ов|[ауи])?)|муд([аио].?|е?н([ьюия]|ей))|мля([тд]ь)?|лять|([нз]а|по)х|м[ао]л[ао]фь[яию]|(жоп|чмо|гнид)[а-я]|г[ао]ндон|[а-я](с[рс]ать|хрен|хер|дрист|дроч|минет|говн|шлюх|г[а|о]вн)[а-я]|мраз(ь|ота)|сук[а-я])|cock|fuck(er|ing)?$/i;
   function getState() {
     console.log("State was get");
     const state = {
@@ -54,6 +54,12 @@
   })
 
   function addTransaction() {
+    if (text.match(ObsceneRegex) !== null) {
+      document.getElementById('text-input').style.border='1px solid red';
+      return;
+    } else {
+      document.getElementById('text-input').style.border='';  
+    }
     if (text === '') {
       document.getElementById('text-input').style.border='1px solid red';
       return;
@@ -127,8 +133,8 @@
     </div>
     <div id="add-block">
       <h3>ДОБАВИТЬ ТРАНЗАКЦИЮ</h3>
-      <input id="text-input" type="text" placeholder="Введите, на что потратили" bind:value={text}>
-      <input id="price-input" type="number" placeholder="Сколько потратили" bind:value={price}>
+      <input id="text-input" type="text" placeholder="Введите описание транзакции" bind:value={text}>
+      <input id="price-input" type="number" placeholder="Введите сумму транзакции" bind:value={price}>
       <button on:click={addTransaction}>Добавить</button>
     </div>
   </div>
