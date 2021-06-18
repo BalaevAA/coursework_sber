@@ -25,7 +25,7 @@
     return state;
   }
 
-  const token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyZGQwOGE3NjEyODE1YWVlYWFiMmM5Mzk5ZTVlYTI2Y2ZlMzUxY2I2ZDY2Zjc0MmMxMzRkYWMxOWEzZDhlOGRjNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyMzk2MDk2NSwiaWF0IjoxNjIzODc0NTU1LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiZTRjODFmODctZmI0My00ZTdiLTg4ZTUtOGJmYzVjMDE0ZjIwIiwic2lkIjoiOGI4ZTY1MmItMzliYi00NTViLTg2MzYtMWViYTkwZTdiMjU0In0.VUpbmMBF-ZS5msANHlyYt3-ZV0LE2-x0cKYFqzZPWgK8iY5Ezole0wxV5cWRRKf0JEERGoCZ-iuRHfYR7xFg5d1iwHN26iKJTzPmx4Ldz2qMSaRTrtvQCC3I5NzbTVjs9iNIoNBEPy64lTgDZn3gcUBzX54cz_EZwlmzZWc5Yhuoo0vaATVmiEnO6UHpwkppqrcbqFKzgd8cmWe8-Ge_uLVfcn2GihQ3CHLJhDdQoOedAtoUREtiXRDnTPBVxh7RvrxVb-qeapfs69I7db9XuPzPlmaEt8BQCSu33PU9QsfskB6yWrFRBLntXs6ggyI3_3D7za-9hZI9fEWS9y0rPNJGwdp80MjR57FGJpJFRLCxAMaA6VFLOirzIopGcqQzr6VY8D2eRc6PNGMQOF0-vmL759sv4RVahpB6G5_HepTWhme8e6jPfk4xUrW3vFK-8Ub3fUrtZGEaS4A_S8MWwrZoH-4-8cx_rewwUjU8csymO_p65pqUCQHPEaefQk-5cauPxUDjupusls1MhSN5aDlxbE7tHGWkzP4YkbaLg8-NQLu6IxmWe_0jON0X7b6eQV5cZ6vRA5BKzxN7MHFo3Bh5RHOyPq9yP9yC1el3AdIXIwlT0mrHV1lrByG95D31EuV6PA-MbczB06M0jwM2tmp7obnCDnxWvc8QNoPzhJ0';
+  const token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyZGQwOGE3NjEyODE1YWVlYWFiMmM5Mzk5ZTVlYTI2Y2ZlMzUxY2I2ZDY2Zjc0MmMxMzRkYWMxOWEzZDhlOGRjNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyNDA5NzUwOCwiaWF0IjoxNjI0MDExMDk4LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiOGMxNjFjMmYtYjZkNS00ZTcwLWFiYzYtNDM0YmUxMDZmNTllIiwic2lkIjoiYmEzMTliNmYtYmI4NS00MDAxLWIzNmEtNjUxZGM1NjMxYmQ2In0.Kcl76nXEjCoToClSA3eyBgAAVjo9pyBdmOcp75Ty61EPZjykdJPClUW0aC4_2J7_NOGWLuqlE_EUWUD2Hm6A6ckjkhgnnW5XmeEkcUguR1nq4QtKlbY2hs-X-d8qTlmYfO19Je5uJvsFXf9qc77RZ03mdoqNCwNvz2fz6rv7Ne8ai_k7h2fjsq06iDi_ZwPjdDf9niJZwYfmdfIgQYweDUEx316tM7uX3UGdEfUVeDhyAaChLk2bxSSGgBjvgAfmBBHW2K04mTkXgfiQjPf7crPFZ7_9Ct8FycYnyafsQ6vsg0NrN2fE-3vtLi12EWOOC02k6pVfEGOYBfrmF1VMlocax4Uek3nclYhc2pO4DICAJw1LgVlMyT3nCjSGVSzwFwLcBi1Dvr7xF-mQiYyQ6otCKJguZt7F5nBJ36IP0AbcpblU8BmFqmAyyzKlTUFHEAsAqsDi3hZ6iWVJWBj7eM3tTko2-GeUdLYehNS5mvLocE3rD4JKq3AOvNVWSbFlIAVnwtjqHI_Qs9aAsrHoiW-PLe4vt0X-0oxfKJ-gkDZzWeLcASPQq7yQpi2J8hQUFAhULcwCu8Le2-jGpZwtmj-6L3VYGu2A4js7Th6FbMUBY0cQH-lEHV3wsPeB35op8Q2RxtJGP-KZoBK8OEl7D6y72Ju3nD5Macv4GsNAPO4';
   const initPhrase = 'Включи Финансовый трекер'
 
     const init = () => {
@@ -148,6 +148,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
   }
 
   #dashboard {
@@ -199,7 +200,7 @@
   }
 
   #transactions {
-    max-height: 75%;
+    max-height: 300px;
     padding: 0 30px;
     overflow: auto;
   }
@@ -278,7 +279,12 @@
     margin-top: 10px;
     cursor: pointer;
   }
-  
+  @media (min-width: 780px) and (max-height: 600px) {
+    main {
+      min-height: 90%;
+      height: auto;
+    }
+  }
   @media (max-width: 780px) {
     main {
       align-items: start;
@@ -301,6 +307,9 @@
     #statistics {
       grid-column: 2;
       grid-row: 1;
+    }
+    #transactions {
+      max-height: 75%;
     }
 
     #history {
