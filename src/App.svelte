@@ -135,7 +135,7 @@
       <h3>ДОБАВИТЬ ТРАНЗАКЦИЮ</h3>
       <input id="text-input" type="text" placeholder="Введите описание транзакции" bind:value={text}>
       <input id="price-input" type="number" placeholder="Введите сумму транзакции" bind:value={price}>
-      <button on:click={addTransaction}>Добавить</button>
+      <button class="btn-add" on:click={addTransaction}>Добавить</button>
     </div>
   </div>
 </main>
@@ -210,6 +210,10 @@
     justify-content: start;
     align-items: center;
     margin: 10px 0;
+  }
+
+  .btn-add {
+    border-radius: 15px;
   }
 
   .cross {
