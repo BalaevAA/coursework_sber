@@ -124,7 +124,10 @@
               &#10006;
             </div>
             <div class="transaction {transaction.price > 0 ? 'positive' : 'negative'}">
-              <p>{ind+1}. {transaction.text}</p>
+              <div style="display: flex; justify-content: start;">
+                <p>{ind+1}. </p>
+                <p>{transaction.text}</p>
+              </div>
               <p>{transaction.price>0 ? '+' : ''}{transaction.price}</p>
             </div>
           </div>
@@ -233,10 +236,6 @@
   }
 
   .transaction {
-    white-space: nowrap;
-  }
-   
-  .transaction {
     flex: 1;
     display: flex;
     justify-content: space-between;
@@ -247,8 +246,7 @@
   }
 
   .transaction p {
-    margin: 0;
-    white-space: normal;
+    margin: 0 10px 0 0;
   }
 
   .transaction p:first-of-type {
