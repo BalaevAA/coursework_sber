@@ -154,6 +154,12 @@
     overflow: auto;
   }
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   #dashboard {
     width: 1000px;
     display: grid;
