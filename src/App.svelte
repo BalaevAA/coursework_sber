@@ -11,6 +11,7 @@
   let text = '';
   let price;
   let ObsceneRegex = /^((у|[нз]а|(хитро|не)?вз?[ыьъ]|с[ьъ]|(и|ра)[зс]ъ?|(о[тб]|под)[ьъ]?|(.\B)+?[оаеи])?-?([её]б(?!о[рй])|и[пб][ае][тц]).?|(н[иеа]|[дп]о|ра[зс]|з?а|с(ме)?|о(т|дно)?|апч)?-?х[уy]([яйиеёю]|ли(?!ган)).?|(в[зы]|(три|два|четыре)жды|(н|сук)а)?-?[б6]л(я(?!(х|ш[кн]|мб)[ауеыио]).?|[еэ][дт]ь?)|(ра[сз]|[зн]а|[со]|вы?|п(р[ои]|од)|и[зс]ъ?|[ао]т)?п[иеё]зд.?|(за)?п[ие]д[аое]?р((ас)?(и(ли)?[нщктл]ь?)?|(о(ч[еи])?)?к|юг)[ауеы]?|манд([ауеы]|ой|[ао]вошь?(е?к[ауе])?|юк(ов|[ауи])?)|муд([аио].?|е?н([ьюия]|ей))|мля([тд]ь)?|лять|([нз]а|по)х|м[ао]л[ао]фь[яию]|(жоп|чмо|гнид)[а-я]|г[ао]ндон|[а-я](с[рс]ать|хрен|хер|дрист|дроч|минет|говн|шлюх|г[а|о]вн)[а-я]|мраз(ь|ота)|сук[а-я])|cock|fuck(er|ing)?$/i;
+  let Reg = /^[-]?(?:[1-9]\d*|\d)$/;
   function getState() {
     console.log("State was get");
     const state = {
@@ -66,7 +67,13 @@
     } else {
       document.getElementById('text-input').style.border='';
     }
-    if (price === 0 || price === undefined || price === null) {
+    if(price.match(Reg) === null){
+      document.getElementById('price-input').style.border = '1px solid red';
+      return;
+    } else {
+      document.getElementById('text-input').style.border='';  
+    }
+    if (Number(price) === 0 || Number(price) === undefined || Number(price) === null) {
       document.getElementById('price-input').style.border = '1px solid red';
       return;
     } else {
@@ -78,10 +85,10 @@
       text,
       price
     }]
-    if (price > 0)
-      income += price;
+    if (Number(price) > 0)
+      income += Number(price);
     else
-      outcome += -1*price;
+      outcome += -1*Number(price);
     text = '';
     price = undefined;
   }
@@ -137,7 +144,7 @@
     <div id="add-block">
       <h3>ДОБАВИТЬ ТРАНЗАКЦИЮ</h3>
       <input id="text-input" type="text" placeholder="Введите описание транзакции" bind:value={text}>
-      <input id="price-input" type="number" placeholder="Введите сумму транзакции" bind:value={price}>
+      <input id="price-input" type="text" placeholder="Введите сумму транзакции" bind:value={price}>
       <button class="btn-add" on:click={addTransaction}>Добавить</button>
     </div>
   </div>
