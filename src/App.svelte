@@ -11,7 +11,7 @@
   let text = '';
   let price;
   let ObsceneRegex = /^((у|[нз]а|(хитро|не)?вз?[ыьъ]|с[ьъ]|(и|ра)[зс]ъ?|(о[тб]|под)[ьъ]?|(.\B)+?[оаеи])?-?([её]б(?!о[рй])|и[пб][ае][тц]).?|(н[иеа]|[дп]о|ра[зс]|з?а|с(ме)?|о(т|дно)?|апч)?-?х[уy]([яйиеёю]|ли(?!ган)).?|(в[зы]|(три|два|четыре)жды|(н|сук)а)?-?[б6]л(я(?!(х|ш[кн]|мб)[ауеыио]).?|[еэ][дт]ь?)|(ра[сз]|[зн]а|[со]|вы?|п(р[ои]|од)|и[зс]ъ?|[ао]т)?п[иеё]зд.?|(за)?п[ие]д[аое]?р((ас)?(и(ли)?[нщктл]ь?)?|(о(ч[еи])?)?к|юг)[ауеы]?|манд([ауеы]|ой|[ао]вошь?(е?к[ауе])?|юк(ов|[ауи])?)|муд([аио].?|е?н([ьюия]|ей))|мля([тд]ь)?|лять|([нз]а|по)х|м[ао]л[ао]фь[яию]|(жоп|чмо|гнид)[а-я]|г[ао]ндон|[а-я](с[рс]ать|хрен|хер|дрист|дроч|минет|говн|шлюх|г[а|о]вн)[а-я]|мраз(ь|ота)|сук[а-я])|cock|fuck(er|ing)?$/i;
-  let Reg = /^[-]?(?:[1-9]\d*|\d)$/;
+  //let Reg = /^[-]?(?:[1-9]\d*|\d)$/;
   function getState() {
     console.log("State was get");
     const state = {
@@ -26,7 +26,7 @@
     return state;
   }
 
-  const token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyZGQwOGE3NjEyODE1YWVlYWFiMmM5Mzk5ZTVlYTI2Y2ZlMzUxY2I2ZDY2Zjc0MmMxMzRkYWMxOWEzZDhlOGRjNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyNDI4Mzg2MCwiaWF0IjoxNjI0MTk3NDUwLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiODhjNzZlYjMtZGRiNi00ZThjLTg2ODYtNjUxMzdlNDljMTgwIiwic2lkIjoiM2E2ZjZlYjYtNzMxZC00OGMxLWI3MDQtMzhjZDQwNzllYmJhIn0.jYMcVMVFVlpfvmbSLk7GYXcANK1VfI60zNVeKzNz22bWPA7NTt5DsSiFp6caxjccWP0x8OfauB3U1R2h1RP9uYo3NZbokVm9r8wAFwSd62r9Nwhm0L7FOm3r1943KSbbn0OLtfPUCpL1tW2prBqrT6gMzFYwWqhxnwceOIB3iiNcrL2s735Wxrr-t0Dv3NB8j1m7mnu_EOmgCXIHJu6NqziyGI-mCGc7nyapOuZqSdJ5bo02RfPehbH2TI-TS427ofosZkFKyDhxpUKT-cI3qqsT1fAbDFc-KM33yhmZ5pvywKarFGXkWvePSAYa7TRDuR4vvhyjUuEmx_NdpiV5LcV6AnJwVPFV4DHS4J33tGJMp5Fjolt2FysXBVYToeNoS2Kkiri6qqS367Z0urSHQAQ3vCMVokrIBaRHY33ag-P7XKyQ351R0uT1uS7BJQnX28zrk4Xj8T06juoGE5WNPZhX4C_1sFQFUNpZ0T2FE7HBisWybZMJAMDjK8ctyE2bFZ0ukT9SuRjtz2S1pD3qGEA9IeugU7b3rN4iXJM4c7ntP-bl5YgB_cVij0kcFQG8H-BTKeq4ZLyS6ftpblci-YexckVC_x7qhC82Iv7t75_AOY8ZP9jrR6ntbdWp7zFlbYzEniVUt0tniVcHKrUtU6WstLnb8zOWHcpwRGqeW30';
+  const token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyZGQwOGE3NjEyODE1YWVlYWFiMmM5Mzk5ZTVlYTI2Y2ZlMzUxY2I2ZDY2Zjc0MmMxMzRkYWMxOWEzZDhlOGRjNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyNDUzMjMyNiwiaWF0IjoxNjI0NDQ1OTE2LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiMzIyZjQ3MDEtZTFmZS00ODU0LWJiNGUtYmVhNmQ1MjBkNjRkIiwic2lkIjoiZmM0NWIxNTQtODFkNi00MTU3LTlmMGEtMjlkZTI3NDhlZDRiIn0.bF6MUSCJX6ywwA6FIkZFTNTP6rS7LJ5il_CK-RbmpBNJ-6OPx2XZeEUcoYweXiyx2j5meN9Z1ZT1yA251BWGQ0Wb0su_cPy1HL9Cj0uZ-QlBKH6rhX0vBtllDZKGnTlxrqn9vgLPrMXyZbD3uvp8kWNw7NY1Y6gFBJX6T76834M-705VSrw61s_eBHTkUuSZmG-rYN7ketl6XY_ehbtrdZhJrgS5_QBmWqUPGBv672sDN1QHTzxbQbUEpxD7qSpJhcaBLLcfgxWWeW3s0kGf_BBawUSKyn-nkk-KW73hYyl1anAxWt1hSn1kyToDbsnZ_TXqopMuAkp-E7scIHXHj8ZXdg3TE9ghKY6x57t1-j9wGhGt-tAuGzNM8zcxJoYcvgmdcBFoQq8UQClr9ffQoeg8Zk_h_TqXsSqoIYviprGNWKWqtCYkRLTvzT0T8yPD_f5kq-O8_61M-KOYf4Ul7Gphc9ev0oviQFEu2xQZrvJdW50A5QMxgfNPVw-W66NFAlIg5j_ol3ut7HJYfMyF0VTSrPHUPxe6oyHH_A-jCRteqSGCLPEZtWyAa09s5zTxosgD0EN5tJVJCAruCCOuVBWNLMQVqsk46QuQ7eOZPg89xjU7NsCPmVmBB0px4BxwhQQnjSWtHbfyvP5M-WEQORkjQ09ZEiP19Fc99mgKU-M';
   const initPhrase = 'Включи Финансовый трекер'
 
     const init = () => {
@@ -61,20 +61,16 @@
     } else {
       document.getElementById('text-input').style.border='';  
     }
+    price = Number(price);
     if (text === '') {
       document.getElementById('text-input').style.border='1px solid red';
       return;
     } else {
       document.getElementById('text-input').style.border='';
     }
-    if(price.match(Reg) === null){
+    if (price === 0 || price === undefined || price === null || isNaN(price)) {
       document.getElementById('price-input').style.border = '1px solid red';
-      return;
-    } else {
-      document.getElementById('text-input').style.border='';  
-    }
-    if (Number(price) === 0 || Number(price) === undefined || Number(price) === null) {
-      document.getElementById('price-input').style.border = '1px solid red';
+      price = ''
       return;
     } else {
       document.getElementById('price-input').style.border = '';
@@ -85,10 +81,10 @@
       text,
       price
     }]
-    if (Number(price) > 0)
-      income += Number(price);
+    if (price > 0)
+      income += price;
     else
-      outcome += -1*Number(price);
+      outcome += -1*price;
     text = '';
     price = undefined;
   }
